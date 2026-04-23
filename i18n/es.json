@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "INICIO",
+    "services": "SERVICIOS",
+    "about": "ACERCA DE",
+    "values": "VALORES",
+    "contact": "CONTACTO"
+  },
+  "hero": {
+    "tagline": "GAMES • APPS • AUTOMATION • WEB",
+    "description": "Somos un estudio de desarrollo creativo y tecnológico. Combinamos innovación, diseño y código para crear experiencias digitales únicas y de alto impacto.",
+    "btnServices": "VER SERVICIOS",
+    "btnContact": "CONTACTAR",
+    "scroll": "SCROLL"
+  },
+  "services": {
+    "title": "NUESTROS SERVICIOS",
+    "subtitle": "LO QUE HACEMOS",
+    "games": {
+      "title": "VIDEOJUEGOS",
+      "desc": "Desarrollamos experiencias de juego inmersivas con mecánicas innovadoras y arte de alto impacto visual."
+    },
+    "apps": {
+      "title": "APLICACIONES",
+      "desc": "Apps móviles y de escritorio diseñadas para maximizar la experiencia del usuario y la eficiencia."
+    },
+    "automation": {
+      "title": "AUTOMATIZACIÓN",
+      "desc": "Soluciones de automatización inteligente que optimizan procesos y reducen costos operativos."
+    },
+    "web": {
+      "title": "SOLUCIONES WEB",
+      "desc": "Plataformas web modernas, rápidas y escalables que impulsan tu presencia digital."
+    }
+  },
+  "about": {
+    "title": "SOBRE ARVTECH STUDIO",
+    "subtitle": "QUIÉNES SOMOS",
+    "p1": "Somos un estudio de desarrollo creativo y tecnológico especializado en videojuegos, aplicaciones, automatización y soluciones web.",
+    "p2": "Combinamos innovación, diseño y código para crear experiencias digitales únicas y de alto impacto que transforman ideas en realidades extraordinarias.",
+    "services": "SERVICIOS",
+    "passion": "PASIÓN",
+    "quality": "CALIDAD"
+  },
+  "values": {
+    "title": "NUESTROS VALORES",
+    "subtitle": "EN QUÉ CREEMOS",
+    "innovation": {
+      "label": "INNOVATION",
+      "desc": "Siempre al frente del cambio tecnológico."
+    },
+    "quality": {
+      "label": "QUALITY",
+      "desc": "Estándares de excelencia en cada entrega."
+    },
+    "passion": {
+      "label": "PASSION",
+      "desc": "Amor genuino por lo que construimos."
+    },
+    "reliability": {
+      "label": "RELIABILITY",
+      "desc": "Comprometidos con cada proyecto y cliente."
+    }
+  },
+  "cta": {
+    "title": "CODE. CREATE.",
+    "highlight": "CONQUER.",
+    "subtitle": "NUESTRO LEMA",
+    "subtitle2": "Construido con PASIÓN. Impulsado por INNOVACIÓN."
+  },
+  "contact": {
+    "title": "CONTÁCTANOS",
+    "subtitle": "HABLEMOS",
+    "name": "NOMBRE",
+    "namePlaceholder": "Tu nombre completo",
+    "email": "EMAIL",
+    "emailPlaceholder": "tu@email.com",
+    "service": "SERVICIO",
+    "servicePlaceholder": "¿Qué necesitas? Games, Apps, Web...",
+    "message": "MENSAJE",
+    "messagePlaceholder": "Cuéntanos sobre tu proyecto...",
+    "send": "ENVIAR MENSAJE",
+
+    "successMessage": "¡Mensaje enviado correctamente! Recibirás una confirmación en tu email.",
+    "errorMessage": "Error al enviar el mensaje. Intenta de nuevo."
+  },
+  "footer": {
+    "rights": "TODOS LOS DERECHOS RESERVADOS."
+  }
+}

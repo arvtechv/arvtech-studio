@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "HOME",
+    "services": "SERVICES",
+    "about": "ABOUT",
+    "values": "VALUES",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "tagline": "GAMES • APPS • AUTOMATION • WEB",
+    "description": "We are a creative and technological development studio. We combine innovation, design and code to create unique digital experiences with high impact.",
+    "btnServices": "VIEW SERVICES",
+    "btnContact": "CONTACT US",
+    "scroll": "SCROLL"
+  },
+  "services": {
+    "title": "OUR SERVICES",
+    "subtitle": "WHAT WE DO",
+    "games": {
+      "title": "VIDEO GAMES",
+      "desc": "We develop immersive gaming experiences with innovative mechanics and high-impact visual art."
+    },
+    "apps": {
+      "title": "APPLICATIONS",
+      "desc": "Mobile and desktop apps designed to maximize user experience and efficiency."
+    },
+    "automation": {
+      "title": "AUTOMATION",
+      "desc": "Smart automation solutions that optimize processes and reduce operating costs."
+    },
+    "web": {
+      "title": "WEB SOLUTIONS",
+      "desc": "Modern, fast and scalable web platforms that boost your digital presence."
+    }
+  },
+  "about": {
+    "title": "ABOUT ARVTECH STUDIO",
+    "subtitle": "WHO WE ARE",
+    "p1": "We are a creative and technological development studio specializing in video games, applications, automation and web solutions.",
+    "p2": "We combine innovation, design and code to create unique digital experiences with high impact that transform ideas into extraordinary realities.",
+    "services": "SERVICES",
+    "passion": "PASSION",
+    "quality": "QUALITY"
+  },
+  "values": {
+    "title": "OUR VALUES",
+    "subtitle": "WHAT WE BELIEVE IN",
+    "innovation": {
+      "label": "INNOVATION",
+      "desc": "Always at the forefront of technological change."
+    },
+    "quality": {
+      "label": "QUALITY",
+      "desc": "Excellence standards in every delivery."
+    },
+    "passion": {
+      "label": "PASSION",
+      "desc": "Genuine love for what we build."
+    },
+    "reliability": {
+      "label": "RELIABILITY",
+      "desc": "Committed to every project and client."
+    }
+  },
+  "cta": {
+    "title": "CODE. CREATE.",
+    "highlight": "CONQUER.",
+    "subtitle": "OUR MOTTO",
+    "subtitle2": "Built with PASSION. Driven by INNOVATION."
+  },
+  "contact": {
+    "title": "CONTACT US",
+    "subtitle": "LET'S TALK",
+    "name": "NAME",
+    "namePlaceholder": "Your full name",
+    "email": "EMAIL",
+    "emailPlaceholder": "your@email.com",
+    "service": "SERVICE",
+    "servicePlaceholder": "What do you need? Games, Apps, Web...",
+    "message": "MESSAGE",
+    "messagePlaceholder": "Tell us about your project...",
+    "send": "SEND MESSAGE",
+
+    "successMessage": "Message sent successfully! You will receive a confirmation in your email.",
+    "errorMessage": "Error sending message. Please try again."
+  },
+  "footer": {
+    "rights": "ALL RIGHTS RESERVED."
+  }
+}
