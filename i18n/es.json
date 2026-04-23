@@ -7,11 +7,11 @@
     "contact": "CONTACTO"
   },
   "hero": {
-    "tagline": "GAMES • APPS • AUTOMATION • WEB",
+    "tagline": "JUEGOS • APPS • AUTOMATIZACIÓN • WEB",
     "description": "Somos un estudio de desarrollo creativo y tecnológico. Combinamos innovación, diseño y código para crear experiencias digitales únicas y de alto impacto.",
     "btnServices": "VER SERVICIOS",
     "btnContact": "CONTACTAR",
-    "scroll": "SCROLL"
+    "scroll": "DESPLAZARSE"
   },
   "services": {
     "title": "NUESTROS SERVICIOS",
@@ -46,25 +46,25 @@
     "title": "NUESTROS VALORES",
     "subtitle": "EN QUÉ CREEMOS",
     "innovation": {
-      "label": "INNOVATION",
+      "label": "INOVACIÓN",
       "desc": "Siempre al frente del cambio tecnológico."
     },
     "quality": {
-      "label": "QUALITY",
+      "label": "CALIDAD",
       "desc": "Estándares de excelencia en cada entrega."
     },
     "passion": {
-      "label": "PASSION",
+      "label": "PASIÓN",
       "desc": "Amor genuino por lo que construimos."
     },
     "reliability": {
-      "label": "RELIABILITY",
+      "label": "RELIABILIDAD",
       "desc": "Comprometidos con cada proyecto y cliente."
     }
   },
   "cta": {
-    "title": "CODE. CREATE.",
-    "highlight": "CONQUER.",
+    "title": "CODIFICAR. CREAR.",
+    "highlight": "CONQUISTAR.",
     "subtitle": "NUESTRO LEMA",
     "subtitle2": "Construido con PASIÓN. Impulsado por INNOVACIÓN."
   },
