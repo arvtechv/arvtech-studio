@@ -269,6 +269,11 @@ export default function ArvtechStudio() {
         .social-icon { transition: color 0.2s, transform 0.2s; cursor:pointer; }
         .social-icon:hover { color:#FF8A00 !important; transform:scale(1.2); }
         .section-anim { animation: fadeIn 0.8s ease both; }
+
+        @media (max-width: 768px) {
+          .desktop-nav { display: none !important; }
+          #hamburger { display: flex !important; }
+        }
       `}</style>
 
       <Particles />
@@ -326,12 +331,13 @@ export default function ArvtechStudio() {
           }}>{t("hero.btnContact").toUpperCase()}</button>
         </div>
 
-        {/* Hamburger */}
-        <div style={{ display: "none", flexDirection: "column", gap: 5, cursor: "pointer" }} id="hamburger"
-          onClick={() => setMenuOpen(!menuOpen)}>
-          {[0,1,2].map(i => <div key={i} style={{ width: 24, height: 2, background: menuOpen && i===1 ? "transparent" : "#FF4D00" }} />)}
-        </div>
+      {/* Hamburger */}
+      <div style={{ display: "flex", flexDirection: "column", gap: 5, cursor: "pointer" }} id="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}>
+        {[0,1,2].map(i => <div key={i} style={{ width: 24, height: 2, background: menuOpen && i===1 ? "transparent" : "#FF4D00" }} />)}
+      </div>
       </nav>
+ 
 
       {/* Mobile menu */}
       {menuOpen && (
@@ -340,6 +346,8 @@ export default function ArvtechStudio() {
           background: "rgba(13,17,23,0.98)", backdropFilter: "blur(20px)",
           padding: "24px 5%", display: "flex", flexDirection: "column", gap: 20,
           borderBottom: "1px solid rgba(255,77,0,0.3)"
+
+          
         }}>
           {NAV_LINKS.map(l => (
             <span key={l} className="nav-link" onClick={() => scrollTo(l)}
