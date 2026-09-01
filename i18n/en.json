@@ -2,35 +2,63 @@
   "nav": {
     "home": "HOME",
     "services": "SERVICES",
+    "care": "CARE",
+    "projects": "PROJECTS",
     "about": "ABOUT",
     "values": "VALUES",
     "contact": "CONTACT"
   },
   "hero": {
-    "tagline": "GAMES • APPS • AUTOMATION • WEB",
-    "description": "We are a creative and technological development studio. We combine innovation, design and code to create unique digital experiences with high impact.",
+    "tagline": "ARVTECH STUDIO",
+    "title1": "WE CREATE DIGITAL SOLUTIONS",
+    "title2": "THAT MAKE AN IMPACT",
+    "description": "We develop custom video games, applications, systems and digital experiences. We combine creativity, technology and innovation to take your idea to the next level.",
     "btnServices": "VIEW SERVICES",
+    "btnProjects": "VIEW PROJECTS",
     "btnContact": "CONTACT US",
-    "scroll": "SCROLL"
+    "scroll": "SCROLL",
+    "metrics": {
+      "projectsCount": "+20",
+      "projectsLabel": "PROJECTS",
+      "projectsSub": "Completed",
+      "appsCount": "+5",
+      "appsLabel": "APPLICATIONS",
+      "appsSub": "Published",
+      "clientsCount": "100%",
+      "clientsLabel": "CLIENTES",
+      "clientsSub": "Satisfied",
+      "innovationLabel": "INNOVATION",
+      "innovationSub": "High-impact technology"
+    }
   },
   "services": {
-    "title": "OUR SERVICES",
-    "subtitle": "WHAT WE DO",
+    "title": "TAILORED DIGITAL SOLUTIONS",
+    "subtitle": "OUR SERVICES",
+    "desc": "Technology, creativity and strategy to boost your business",
+    "viewAll": "VIEW ALL SERVICES",
     "games": {
-      "title": "VIDEO GAMES",
-      "desc": "We develop immersive gaming experiences with innovative mechanics and high-impact visual art."
-    },
-    "apps": {
-      "title": "APPLICATIONS",
-      "desc": "Mobile and desktop apps designed to maximize user experience and efficiency."
-    },
-    "automation": {
-      "title": "AUTOMATION",
-      "desc": "Smart automation solutions that optimize processes and reduce operating costs."
+      "title": "GAME DEVELOPMENT",
+      "desc": "We create immersive experiences in 2D, 3D, mobile and multiplatform."
     },
     "web": {
-      "title": "WEB SOLUTIONS",
-      "desc": "Modern, fast and scalable web platforms that boost your digital presence."
+      "title": "WEB DEVELOPMENT",
+      "desc": "Modern, fast and optimized websites for your business."
+    },
+    "apps": {
+      "title": "MOBILE APPLICATIONS",
+      "desc": "Native apps for Android and iOS with attractive and functional designs."
+    },
+    "automation": {
+      "title": "AUTOMATION & SYSTEMS",
+      "desc": "Custom systems to optimize processes and increase productivity."
+    },
+    "business": {
+      "title": "BUSINESS SYSTEMS",
+      "desc": "Point of sale, inventory, restaurants and more enterprise solutions."
+    },
+    "uiux": {
+      "title": "UI/UX DESIGN",
+      "desc": "Modern interfaces that improve the user experience."
     }
   },
   "about": {

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "@/i18n/useTranslation";
 
@@ -8,9 +9,11 @@ const NAV_LINKS = ["Home", "Services", "About", "Values", "Contact"];
 
 const SERVICES = [
   { icon: "🎮", titleKey: "services.games.title", descKey: "services.games.desc", tag: "GAMES" },
-  { icon: "📱", titleKey: "services.apps.title", descKey: "services.apps.desc", tag: "APPS" },
+  { icon: "💻", titleKey: "services.web.title", descKey: "services.web.desc", tag: "WEB" },
+  { icon: "📱", titleKey: "services.apps.title", descKey: "services.apps.desc", tag: "MOBILE" },
   { icon: "⚙️", titleKey: "services.automation.title", descKey: "services.automation.desc", tag: "AUTOMATION" },
-  { icon: "🌐", titleKey: "services.web.title", descKey: "services.web.desc", tag: "WEB" },
+  { icon: "🛒", titleKey: "services.business.title", descKey: "services.business.desc", tag: "BUSINESS" },
+  { icon: "🎨", titleKey: "services.uiux.title", descKey: "services.uiux.desc", tag: "UI/UX" },
 ];
 
 const VALUES = [
@@ -224,7 +227,7 @@ export default function ArvtechStudio() {
   const [activeSection, setActiveSection] = useState("Home");
   const [scrolled, setScrolled] = useState(false);
 
-  const NAV_LINKS = ["home", "services", "about", "values", "contact"];
+  const NAV_LINKS = ["home", "services", "care", "projects", "about", "values", "contact"];
 
 
   useEffect(() => {
@@ -234,8 +237,17 @@ export default function ArvtechStudio() {
   }, []);
 
   const scrollTo = (id) => {
-    const el = document.getElementById(id.toLowerCase());
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    let targetId = id.toLowerCase();
+    if (targetId === "care") {
+      return;
+    }
+    if (targetId === "projects") targetId = "contact";
+    const el = document.getElementById(targetId);
+    console.log("Scrolling to:", targetId, el);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 70; // 70px es el alto del navbar
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
     setMenuOpen(false);
     setActiveSection(id);
   };
@@ -270,6 +282,35 @@ export default function ArvtechStudio() {
         .social-icon:hover { color:#FF8A00 !important; transform:scale(1.2); }
         .section-anim { animation: fadeIn 0.8s ease both; }
 
+        .hero-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 48px;
+          align-items: center;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 80px 0 40px 0;
+          text-align: center;
+        }
+        @media (min-width: 992px) {
+          .hero-grid {
+            grid-template-columns: 1.1fr 0.9fr;
+            text-align: left;
+            padding: 120px 0 60px 0;
+          }
+        }
+        .metrics-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          margin-top: 40px;
+        }
+        @media (min-width: 576px) {
+          .metrics-grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
+        }
+
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           #hamburger { display: flex !important; }
@@ -300,10 +341,17 @@ export default function ArvtechStudio() {
         {/* Desktop links */}
         <div style={{ display: "flex", gap: 32, alignItems: "center" }} className="desktop-nav">
           {NAV_LINKS.map(l => (
-          <span key={l} className="nav-link" onClick={() => scrollTo(l)}
-            style={{ color: activeSection === l ? "#FF4D00" : "rgba(255,255,255,0.75)", fontFamily: "'Orbitron',sans-serif" }}>
-            {t(`nav.${l}`).toUpperCase()}
-          </span>
+            l === "care" ? (
+              <Link key={l} href="/care" className="nav-link"
+                style={{ color: activeSection === l ? "#FF4D00" : "rgba(255,255,255,0.75)", fontFamily: "'Orbitron',sans-serif", textDecoration: "none" }}>
+                {t(`nav.${l}`).toUpperCase()}
+              </Link>
+            ) : (
+              <span key={l} className="nav-link" onClick={() => scrollTo(l)}
+                style={{ color: activeSection === l ? "#FF4D00" : "rgba(255,255,255,0.75)", fontFamily: "'Orbitron',sans-serif" }}>
+                {t(`nav.${l}`).toUpperCase()}
+              </span>
+            )
           ))}
 
               {/* SELECTOR DE IDIOMA */}
@@ -350,103 +398,153 @@ export default function ArvtechStudio() {
           
         }}>
           {NAV_LINKS.map(l => (
-            <span key={l} className="nav-link" onClick={() => scrollTo(l)}
-              style={{ color: "#fff", fontFamily: "'Orbitron',sans-serif", fontSize: 14, letterSpacing: 3 }}>
-              {t(`nav.${l}`).toUpperCase()}
-            </span>
+            l === "care" ? (
+              <Link key={l} href="/care" className="nav-link"
+                style={{ color: "#fff", fontFamily: "'Orbitron',sans-serif", fontSize: 14, letterSpacing: 3, textDecoration: "none" }}>
+                {t(`nav.${l}`).toUpperCase()}
+              </Link>
+            ) : (
+              <span key={l} className="nav-link" onClick={() => scrollTo(l)}
+                style={{ color: "#fff", fontFamily: "'Orbitron',sans-serif", fontSize: 14, letterSpacing: 3 }}>
+                {t(`nav.${l}`).toUpperCase()}
+              </span>
+            )
           ))}
         </div>
       )}
 
       {/* ── HERO ── */}
-      <section id="home" style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 5%", paddingTop: 100 }}>
-        <RadarBg />
+      <section id="home" style={{ position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", padding: "100px 5% 40px 5%" }}>
+        <div className="hero-grid" style={{ width: "100%", position: "relative", zIndex: 2 }}>
+          {/* Columna Izquierda: Textos y Métricas */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+            <span style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 13, letterSpacing: 6, color: "#FF4D00", fontWeight: 700 }}>
+              {t("hero.tagline")}
+            </span>
+            
+            <h1 style={{
+              fontFamily: "'Orbitron',sans-serif", fontWeight: 900,
+              fontSize: "clamp(32px,5.5vw,60px)", letterSpacing: "0.05em",
+              lineHeight: 1.1, color: "#fff"
+            }}>
+              {t("hero.title1")}{" "}
+              <span style={{
+                background: "linear-gradient(135deg, #FF4D00, #FF8A00)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent"
+              }}>
+                {t("hero.title2")}
+              </span>
+            </h1>
 
-        {/* Orange glow circle behind logo */}
-        <div style={{
-          position: "absolute", width: 320, height: 320, borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(255,77,0,0.15) 0%, transparent 70%)",
-          top: "50%", left: "50%", transform: "translate(-50%,-60%)", pointerEvents: "none"
-        }} />
+            <p style={{
+              fontFamily: "'Rajdhani',sans-serif", fontWeight: 300,
+              fontSize: "clamp(15px,1.6vw,19px)", color: "rgba(255,255,255,0.7)",
+              lineHeight: 1.6, maxWidth: 580
+            }}>
+              {t("hero.description")}
+            </p>
 
-        <div style={{ position: "relative", zIndex: 2, animation: "floatUp 1s ease both" }}>
-          <LogoMark size={160} glow />
-        </div>
+            <div style={{ display: "flex", gap: 16, flexWrap: "wrap", marginTop: 12 }}>
+              <button className="cta-btn" onClick={() => scrollTo("Services")} style={{
+                background: "linear-gradient(135deg,#FF4D00,#FF8A00)",
+                border: "none", color: "#fff", padding: "16px 36px",
+                fontFamily: "'Orbitron',sans-serif", fontSize: 12, fontWeight: 700,
+                letterSpacing: 2, borderRadius: 4, cursor: "pointer",
+                boxShadow: "0 0 20px rgba(255,77,0,0.4)",
+              }}>{t("hero.btnServices")}</button>
+              <button className="cta-btn" onClick={() => scrollTo("Projects")} style={{
+                background: "transparent",
+                border: "1px solid rgba(255,77,0,0.6)", color: "#fff", padding: "16px 36px",
+                fontFamily: "'Orbitron',sans-serif", fontSize: 12, fontWeight: 700,
+                letterSpacing: 2, borderRadius: 4, cursor: "pointer",
+              }}>{t("hero.btnProjects")}</button>
+            </div>
 
-        <h1 style={{
-          fontFamily: "'Orbitron',sans-serif", fontWeight: 900,
-          fontSize: "clamp(40px,8vw,96px)", letterSpacing: "0.12em",
-          background: "linear-gradient(180deg,#ffffff 40%,rgba(255,255,255,0.5) 100%)",
-          WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-          marginTop: 24, lineHeight: 1, position: "relative", zIndex: 2,
-          animation: "floatUp 1s 0.2s ease both",
-        }}>
-          ARVTECH
-        </h1>
+            {/* Bloque de Métricas */}
+            <div className="metrics-grid">
+              <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+                <span style={{ fontSize: 24 }}>🚀</span>
+                <div>
+                  <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 20, fontWeight: 900, color: "#fff" }}>{t("hero.metrics.projectsCount")}</div>
+                  <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 2, color: "#FF4D00", fontWeight: 700 }}>{t("hero.metrics.projectsLabel")}</div>
+                  <div style={{ fontFamily: "'Rajdhani',sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{t("hero.metrics.projectsSub")}</div>
+                </div>
+              </div>
+              <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+                <span style={{ fontSize: 24 }}>💻</span>
+                <div>
+                  <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 20, fontWeight: 900, color: "#fff" }}>{t("hero.metrics.appsCount")}</div>
+                  <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 2, color: "#FF4D00", fontWeight: 700 }}>{t("hero.metrics.appsLabel")}</div>
+                  <div style={{ fontFamily: "'Rajdhani',sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{t("hero.metrics.appsSub")}</div>
+                </div>
+              </div>
+              <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+                <span style={{ fontSize: 24 }}>🤝</span>
+                <div>
+                  <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 20, fontWeight: 900, color: "#fff" }}>{t("hero.metrics.clientsCount")}</div>
+                  <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 2, color: "#FF4D00", fontWeight: 700 }}>{t("hero.metrics.clientsLabel")}</div>
+                  <div style={{ fontFamily: "'Rajdhani',sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{t("hero.metrics.clientsSub")}</div>
+                </div>
+              </div>
+              <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+                <span style={{ fontSize: 24 }}>⚡</span>
+                <div>
+                  <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 14, fontWeight: 900, color: "#fff", height: 26, display: "flex", alignItems: "center" }}>{t("hero.metrics.innovationLabel")}</div>
+                  <div style={{ fontFamily: "'Rajdhani',sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{t("hero.metrics.innovationSub")}</div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div style={{
-          fontFamily: "'Orbitron',sans-serif", fontSize: "clamp(14px,2.5vw,22px)",
-          letterSpacing: "0.5em", color: "#FF4D00",
-          display: "flex", alignItems: "center", gap: 12, marginTop: 4,
-          animation: "floatUp 1s 0.35s ease both", position: "relative", zIndex: 2,
-        }}>
-          <span style={{ display: "block", width: 40, height: 1, background: "linear-gradient(to right,transparent,#FF4D00)" }} />
-          STUDIO
-          <span style={{ display: "block", width: 40, height: 1, background: "linear-gradient(to left,transparent,#FF4D00)" }} />
-        </div>
-
-        <p style={{
-          fontFamily: "'Rajdhani',sans-serif", fontWeight: 400,
-          fontSize: "clamp(13px,1.5vw,16px)", letterSpacing: "0.35em",
-          color: "rgba(255,255,255,0.55)", marginTop: 20,
-          animation: "floatUp 1s 0.5s ease both", position: "relative", zIndex: 2,
-        }}>
-          {t("hero.tagline")}
-        </p>
-
-        <p style={{
-          fontFamily: "'Rajdhani',sans-serif", fontWeight: 300,
-          fontSize: "clamp(15px,1.8vw,20px)", color: "rgba(255,255,255,0.7)",
-          maxWidth: 600, marginTop: 32, lineHeight: 1.8,
-          animation: "floatUp 1s 0.65s ease both", position: "relative", zIndex: 2,
-        }}>
-          {t("hero.description")}
-        </p>
-
-        <div style={{ display: "flex", gap: 16, marginTop: 48, flexWrap: "wrap", justifyContent: "center", position: "relative", zIndex: 2, animation: "floatUp 1s 0.8s ease both" }}>
-          <button className="cta-btn" onClick={() => scrollTo("Services")} style={{
-            background: "linear-gradient(135deg,#FF4D00,#FF8A00)",
-            border: "none", color: "#fff", padding: "16px 40px",
-            fontFamily: "'Orbitron',sans-serif", fontSize: 12, fontWeight: 700,
-            letterSpacing: 3, borderRadius: 4, cursor: "pointer",
-            boxShadow: "0 0 20px rgba(255,77,0,0.4)",
-          }}>{t("hero.btnServices")}</button>
-          <button className="cta-btn" onClick={() => scrollTo("Contact")} style={{
-            background: "transparent",
-            border: "1px solid rgba(255,77,0,0.6)", color: "#FF4D00", padding: "16px 40px",
-            fontFamily: "'Orbitron',sans-serif", fontSize: 12, fontWeight: 700,
-            letterSpacing: 3, borderRadius: 4, cursor: "pointer",
-          }}>{t("hero.btnContact")}</button>
+          {/* Columna Derecha: Imagen mockup del Laptop/Teléfono */}
+          <div style={{ position: "relative", display: "flex", justifyContent: "center", alignItems: "center", width: "100%", minHeight: 350 }}>
+            {/* Orange glow radial background behind layout */}
+            <div style={{
+              position: "absolute", width: "100%", height: "100%", borderRadius: "50%",
+              background: "radial-gradient(circle, rgba(255,77,0,0.18) 0%, transparent 70%)",
+              top: "50%", left: "50%", transform: "translate(-50%,-50%)", pointerEvents: "none"
+            }} />
+            <RadarBg />
+            
+            <img 
+              src="/imagebody.png" 
+              alt="Arvtech Studio Showcase" 
+              style={{ 
+                maxWidth: "115%", 
+                height: "auto", 
+                position: "relative", 
+                zIndex: 2,
+                transform: "translateY(10px)",
+                filter: "drop-shadow(0 25px 50px rgba(0,0,0,0.5))"
+              }} 
+            />
+          </div>
         </div>
 
         {/* Scroll indicator */}
-        <div style={{ position: "absolute", bottom: 40, left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 8, animation: "pulse 2s infinite", zIndex: 2 }}>
+        <div style={{ position: "absolute", bottom: 20, left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 8, animation: "pulse 2s infinite", zIndex: 2 }}>
           <span style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 3, color: "rgba(255,255,255,0.3)" }}>{t("hero.scroll") || "SCROLL"}</span>
-          <div style={{ width: 1, height: 40, background: "linear-gradient(to bottom,#FF4D00,transparent)" }} />
+          <div style={{ width: 1, height: 30, background: "linear-gradient(to bottom,#FF4D00,transparent)" }} />
         </div>
       </section>
 
       {/* ── SERVICES ── */}
       <section id="services" style={{ padding: "100px 5%", position: "relative", zIndex: 2 }}>
         <div style={{ textAlign: "center", marginBottom: 64 }}>
-          <span style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 11, letterSpacing: 6, color: "#FF4D00" }}>{t("services.subtitle")}</span>
-          <h2 style={{ fontFamily: "'Orbitron',sans-serif", fontWeight: 900, fontSize: "clamp(28px,4vw,52px)", letterSpacing: "0.05em", marginTop: 12, background: "linear-gradient(180deg,#fff 60%,rgba(255,255,255,0.5))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+          <span style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 11, letterSpacing: 6, color: "#FF4D00", fontWeight: 700 }}>
+            {t("services.subtitle")}
+          </span>
+          <h2 style={{ fontFamily: "'Orbitron',sans-serif", fontWeight: 900, fontSize: "clamp(28px,4vw,44px)", letterSpacing: "0.05em", marginTop: 12, background: "linear-gradient(180deg,#fff 60%,rgba(255,255,255,0.5))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
             {t("services.title")}
           </h2>
+          <p style={{ fontFamily: "'Rajdhani',sans-serif", fontSize: "clamp(14px,1.8vw,16px)", color: "rgba(255,255,255,0.5)", marginTop: 12 }}>
+            {t("services.desc")}
+          </p>
           <div style={{ width: 60, height: 2, background: "linear-gradient(to right,transparent,#FF4D00,transparent)", margin: "20px auto 0" }} />
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: 24, maxWidth: 1200, margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 24, maxWidth: 1200, margin: "0 auto" }}>
           {SERVICES.map((s, i) => (
             <div key={i} className="service-card section-anim" style={{
               background: "linear-gradient(145deg,rgba(255,77,0,0.05),rgba(13,17,23,0.8))",
@@ -462,6 +560,27 @@ export default function ArvtechStudio() {
               <p style={{ fontFamily: "'Rajdhani',sans-serif", fontSize: 15, color: "rgba(255,255,255,0.65)", lineHeight: 1.7 }}>{t(s.descKey)}</p>
             </div>
           ))}
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "center", marginTop: 48 }}>
+          <button 
+            className="cta-btn" 
+            onClick={() => scrollTo("Contact")}
+            style={{
+              background: "transparent",
+              border: "1px solid rgba(255,77,0,0.6)", 
+              color: "#fff", 
+              padding: "14px 32px",
+              fontFamily: "'Orbitron',sans-serif", 
+              fontSize: 11, 
+              fontWeight: 700, 
+              letterSpacing: 2,
+              borderRadius: 4, 
+              cursor: "pointer"
+            }}
+          >
+            {t("services.viewAll").toUpperCase()}
+          </button>
         </div>
       </section>
 
