@@ -172,7 +172,7 @@ export default function AboutSection() {
             />
             {/* The circular logo image */}
             <img
-              src="/logo_circle_blue.jpg"
+              src="/logo_circle_blue.png"
               alt="Arvtech Studio"
               style={{
                 width: 270,
