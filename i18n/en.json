@@ -1,12 +1,10 @@
 {
   "nav": {
     "home": "HOME",
-    "services": "SERVICES",
-    "care": "CARE",
+    "services": "SOLUTIONS",
+    "care": "TECHNICAL SUPPORT",
     "projects": "PROJECTS",
-    "about": "ABOUT",
-    "values": "VALUES",
-    "contact": "CONTACT"
+    "about": "ABOUT US"
   },
   "hero": {
     "tagline": "ARVTECH STUDIO",
@@ -59,6 +57,49 @@
     "uiux": {
       "title": "UI/UX DESIGN",
       "desc": "Modern interfaces that improve the user experience."
+    }
+  },
+  "projects": {
+    "title": "OUR PROJECTS",
+    "subtitle": "FEATURED PORTFOLIO",
+    "desc": "Explore some of our creations in games, web development, mobile apps and software systems.",
+    "viewDetails": "VIEW DETAILS",
+    "categories": {
+      "all": "ALL",
+      "games": "GAMES",
+      "web": "WEB",
+      "mobile": "MOBILE",
+      "systems": "SYSTEMS"
+    },
+    "p1": {
+      "title": "CyberRealm Arcade",
+      "category": "GAMES",
+      "desc": "2D/3D action game with interactive physics and an immersive experience for PC and mobile devices."
+    },
+    "p2": {
+      "title": "Arvtech ERP & POS System",
+      "category": "SYSTEMS",
+      "desc": "Real-time commercial management, inventory control and point-of-sale system for businesses."
+    },
+    "p3": {
+      "title": "EcoConnect App",
+      "category": "MOBILE",
+      "desc": "Native mobile app for smart monitoring and live environmental data visualization."
+    },
+    "p4": {
+      "title": "Studio Web Platform",
+      "category": "WEB",
+      "desc": "Ultra-fast corporate portal with optimized performance, advanced SEO and smooth animations."
+    },
+    "p5": {
+      "title": "Care Service Hub",
+      "category": "SYSTEMS",
+      "desc": "Interactive system for repair order tracking and real-time status updates for customers."
+    },
+    "p6": {
+      "title": "Nexus Unity Tools",
+      "category": "GAMES",
+      "desc": "Automation tools collection and optimized scripts for game engine workflows."
     }
   },
   "about": {

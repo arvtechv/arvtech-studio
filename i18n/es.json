@@ -1,12 +1,10 @@
 {
   "nav": {
     "home": "INICIO",
-    "services": "SERVICIOS",
-    "care": "CARE",
+    "services": "SOLUCIONES",
+    "care": "SOPORTE TÉCNICO",
     "projects": "PROYECTOS",
-    "about": "ACERCA DE",
-    "values": "VALORES",
-    "contact": "CONTACTO"
+    "about": "NOSOTROS"
   },
   "hero": {
     "tagline": "ARVTECH STUDIO",
@@ -59,6 +57,49 @@
     "uiux": {
       "title": "DISEÑO UI/UX",
       "desc": "Interfaces modernas que mejoran la experiencia del usuario."
+    }
+  },
+  "projects": {
+    "title": "NUESTROS PROYECTOS",
+    "subtitle": "PORTAFOLIO DESTACADO",
+    "desc": "Explora algunas de nuestras creaciones en videojuegos, desarrollo web, aplicaciones móviles y sistemas.",
+    "viewDetails": "VER DETALLES",
+    "categories": {
+      "all": "TODOS",
+      "games": "VIDEOJUEGOS",
+      "web": "WEB",
+      "mobile": "MÓVIL",
+      "systems": "SISTEMAS"
+    },
+    "p1": {
+      "title": "CyberRealm Arcade",
+      "category": "GAMES",
+      "desc": "Videojuego de acción 2D/3D con físicas interactivas y experiencia inmersiva para PC y dispositivos móviles."
+    },
+    "p2": {
+      "title": "Arvtech ERP & POS System",
+      "category": "SISTEMAS",
+      "desc": "Sistema de gestión comercial, control de inventarios y punto de venta en tiempo real para empresas."
+    },
+    "p3": {
+      "title": "EcoConnect App",
+      "category": "MÓVIL",
+      "desc": "Aplicación móvil nativa para monitoreo inteligente y visualización de datos en vivo."
+    },
+    "p4": {
+      "title": "Studio Web Platform",
+      "category": "WEB",
+      "desc": "Portal corporativo ultra rápido con rendimiento optimizado, SEO avanzado y animaciones fluidas."
+    },
+    "p5": {
+      "title": "Care Service Hub",
+      "category": "SISTEMAS",
+      "desc": "Sistema interactivo para registro de órdenes de reparación y seguimiento en tiempo real para clientes."
+    },
+    "p6": {
+      "title": "Nexus Unity Tools",
+      "category": "GAMES",
+      "desc": "Colección de herramientas de automatización y scripts optimizados para motores de desarrollo de videojuegos."
     }
   },
   "about": {
