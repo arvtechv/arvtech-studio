@@ -40,7 +40,7 @@ export default function ContactForm() {
         border: "1px solid #E2E8F0",
         borderRadius: 12,
         padding: "36px 32px",
-        boxShadow: "0 10px 30px -5px rgba(15, 23, 42, 0.06)",
+        boxShadow: "0 10px 30px -5px rgba(0, 102, 255, 0.08)",
       }}
     >
       {[
@@ -55,7 +55,7 @@ export default function ContactForm() {
               fontSize: 10,
               fontWeight: 700,
               letterSpacing: 3,
-              color: "#FF5500",
+              color: "#0066FF",
               display: "block",
               marginBottom: 6,
             }}
@@ -82,8 +82,8 @@ export default function ContactForm() {
               transition: "border-color 0.2s, box-shadow 0.2s",
             }}
             onFocus={(e) => {
-              e.target.style.borderColor = "#FF5500";
-              e.target.style.boxShadow = "0 0 0 3px rgba(255,85,0,0.1)";
+              e.target.style.borderColor = "#0066FF";
+              e.target.style.boxShadow = "0 0 0 3px rgba(0,102,255,0.12)";
             }}
             onBlur={(e) => {
               e.target.style.borderColor = "#CBD5E1";
@@ -100,7 +100,7 @@ export default function ContactForm() {
             fontSize: 10,
             fontWeight: 700,
             letterSpacing: 3,
-            color: "#FF5500",
+            color: "#0066FF",
             display: "block",
             marginBottom: 6,
           }}
@@ -128,8 +128,8 @@ export default function ContactForm() {
             transition: "border-color 0.2s, box-shadow 0.2s",
           }}
           onFocus={(e) => {
-            e.target.style.borderColor = "#FF5500";
-            e.target.style.boxShadow = "0 0 0 3px rgba(255,85,0,0.1)";
+            e.target.style.borderColor = "#0066FF";
+            e.target.style.boxShadow = "0 0 0 3px rgba(0,102,255,0.12)";
           }}
           onBlur={(e) => {
             e.target.style.borderColor = "#CBD5E1";
@@ -182,7 +182,7 @@ export default function ContactForm() {
           width: "100%",
           background: loading
             ? "#CBD5E1"
-            : "linear-gradient(135deg, #FF5500 0%, #FF8800 100%)",
+            : "linear-gradient(135deg, #0052FF 0%, #00C8FF 100%)",
           border: "none",
           color: "#FFFFFF",
           padding: "16px",
@@ -192,7 +192,7 @@ export default function ContactForm() {
           letterSpacing: 3,
           borderRadius: 6,
           cursor: loading ? "not-allowed" : "pointer",
-          boxShadow: "0 6px 20px rgba(255, 85, 0, 0.25)",
+          boxShadow: "0 6px 20px rgba(0, 102, 255, 0.28)",
         }}
       >
         {loading ? "ENVIANDO..." : t("contact.send").toUpperCase()}

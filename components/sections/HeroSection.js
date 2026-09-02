@@ -26,7 +26,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
               fontFamily: "'Orbitron',sans-serif",
               fontSize: 13,
               letterSpacing: 6,
-              color: "#FF5500",
+              color: "#0066FF",
               fontWeight: 700,
             }}
           >
@@ -46,7 +46,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
             {t("hero.title1")}{" "}
             <span
               style={{
-                background: "linear-gradient(135deg, #FF5500 0%, #FF8800 100%)",
+                background: "linear-gradient(135deg, #0052FF 0%, #00C8FF 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -73,7 +73,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
               className="cta-btn"
               onClick={onServicesClick}
               style={{
-                background: "linear-gradient(135deg, #FF5500 0%, #FF8800 100%)",
+                background: "linear-gradient(135deg, #0052FF 0%, #00C8FF 100%)",
                 border: "none",
                 color: "#FFFFFF",
                 padding: "15px 32px",
@@ -83,7 +83,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
                 letterSpacing: 2,
                 borderRadius: 6,
                 cursor: "pointer",
-                boxShadow: "0 6px 20px rgba(255, 85, 0, 0.25)",
+                boxShadow: "0 6px 20px rgba(0, 102, 255, 0.28)",
               }}
             >
               {t("hero.btnServices")}
@@ -94,8 +94,8 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
               onClick={onProjectsClick}
               style={{
                 background: "#FFFFFF",
-                border: "2px solid #FF5500",
-                color: "#FF5500",
+                border: "2px solid #0066FF",
+                color: "#0066FF",
                 padding: "15px 32px",
                 fontFamily: "'Orbitron',sans-serif",
                 fontSize: 12,
@@ -129,7 +129,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
                 <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 18, fontWeight: 900, color: "#0F172A" }}>
                   {t("hero.metrics.projectsCount")}
                 </div>
-                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 2, color: "#FF5500", fontWeight: 700 }}>
+                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 2, color: "#0066FF", fontWeight: 700 }}>
                   {t("hero.metrics.projectsLabel")}
                 </div>
               </div>
@@ -152,7 +152,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
                 <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 18, fontWeight: 900, color: "#0F172A" }}>
                   {t("hero.metrics.appsCount")}
                 </div>
-                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 2, color: "#FF5500", fontWeight: 700 }}>
+                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 2, color: "#0066FF", fontWeight: 700 }}>
                   {t("hero.metrics.appsLabel")}
                 </div>
               </div>
@@ -175,7 +175,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
                 <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 18, fontWeight: 900, color: "#0F172A" }}>
                   {t("hero.metrics.clientsCount")}
                 </div>
-                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 2, color: "#FF5500", fontWeight: 700 }}>
+                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 2, color: "#0066FF", fontWeight: 700 }}>
                   {t("hero.metrics.clientsLabel")}
                 </div>
               </div>
@@ -223,7 +223,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
               width: "90%",
               height: "90%",
               borderRadius: "50%",
-              background: "radial-gradient(circle, rgba(255,85,0,0.12) 0%, transparent 70%)",
+              background: "radial-gradient(circle, rgba(0,102,255,0.15) 0%, transparent 70%)",
               top: "50%",
               left: "50%",
               transform: "translate(-50%,-50%)",
@@ -239,7 +239,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
               height: "auto",
               position: "relative",
               zIndex: 2,
-              filter: "drop-shadow(0 20px 30px rgba(15,23,42,0.12))",
+              filter: "drop-shadow(0 20px 30px rgba(0,102,255,0.15))",
             }}
           />
         </div>

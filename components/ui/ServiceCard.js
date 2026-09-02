@@ -25,9 +25,9 @@ export default function ServiceCard({ service }) {
           fontFamily: "'Orbitron',sans-serif",
           fontSize: 9,
           letterSpacing: 3,
-          color: "#FF5500",
+          color: "#0066FF",
           padding: "6px 12px",
-          background: "#FFF0EB",
+          background: "#E0F2FE",
           borderBottomLeftRadius: 8,
           fontWeight: 700,
         }}

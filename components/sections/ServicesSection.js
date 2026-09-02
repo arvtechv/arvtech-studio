@@ -15,7 +15,7 @@ export default function ServicesSection() {
             fontFamily: "'Orbitron',sans-serif",
             fontSize: 11,
             letterSpacing: 6,
-            color: "#FF5500",
+            color: "#0066FF",
             fontWeight: 700,
           }}
         >
@@ -47,7 +47,7 @@ export default function ServicesSection() {
           style={{
             width: 50,
             height: 3,
-            background: "#FF5500",
+            background: "#0066FF",
             margin: "18px auto 0",
             borderRadius: 2,
           }}

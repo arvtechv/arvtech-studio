@@ -45,7 +45,7 @@ export default function Footer() {
                 fontFamily: "'Orbitron',sans-serif",
                 fontSize: 8,
                 letterSpacing: 6,
-                color: "#FF5500",
+                color: "#0066FF",
                 fontWeight: 700,
               }}
             >
@@ -60,7 +60,7 @@ export default function Footer() {
               fontFamily: "'Orbitron',sans-serif",
               fontSize: 11,
               letterSpacing: 3,
-              color: "#FF5500",
+              color: "#0066FF",
               marginBottom: 6,
               fontWeight: 700,
             }}

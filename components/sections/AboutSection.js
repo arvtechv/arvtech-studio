@@ -27,7 +27,7 @@ export default function AboutSection() {
                 fontFamily: "'Orbitron',sans-serif",
                 fontSize: 11,
                 letterSpacing: 6,
-                color: "#FF5500",
+                color: "#0066FF",
                 fontWeight: 700,
               }}
             >
@@ -50,7 +50,7 @@ export default function AboutSection() {
               style={{
                 width: 40,
                 height: 3,
-                background: "#FF5500",
+                background: "#0066FF",
                 margin: "20px 0",
                 borderRadius: 2,
               }}
@@ -84,7 +84,7 @@ export default function AboutSection() {
                     fontFamily: "'Orbitron',sans-serif",
                     fontSize: 32,
                     fontWeight: 900,
-                    color: "#FF5500",
+                    color: "#0066FF",
                   }}
                 >
                   4+
@@ -108,7 +108,7 @@ export default function AboutSection() {
                     fontFamily: "'Orbitron',sans-serif",
                     fontSize: 32,
                     fontWeight: 900,
-                    color: "#FF5500",
+                    color: "#0066FF",
                   }}
                 >
                   100%
@@ -128,7 +128,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Logo Showcase Box */}
+          {/* Logo Circular Badge */}
           <div
             style={{
               display: "flex",
@@ -137,31 +137,54 @@ export default function AboutSection() {
               position: "relative",
             }}
           >
+            {/* Outer rotating dashed ring */}
             <div
               style={{
-                position: "relative",
-                width: 280,
-                height: 280,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#FFFFFF",
+                position: "absolute",
+                width: 320,
+                height: 320,
+                border: "1.5px dashed rgba(0,200,255,0.4)",
                 borderRadius: "50%",
-                boxShadow: "0 20px 40px rgba(15,23,42,0.06)",
-                border: "1px solid #E2E8F0",
+                animation: "rotateSlow 18s linear infinite",
               }}
-            >
-              <div
-                style={{
-                  position: "absolute",
-                  inset: -10,
-                  border: "1px dashed rgba(255,85,0,0.3)",
-                  borderRadius: "50%",
-                  animation: "rotateSlow 25s linear infinite",
-                }}
-              />
-              <LogoMark />
-            </div>
+            />
+            {/* Inner counter-rotating ring */}
+            <div
+              style={{
+                position: "absolute",
+                width: 295,
+                height: 295,
+                border: "1px dashed rgba(0,102,255,0.25)",
+                borderRadius: "50%",
+                animation: "rotateSlow 30s linear infinite reverse",
+              }}
+            />
+            {/* Glow pulse backdrop */}
+            <div
+              style={{
+                position: "absolute",
+                width: 260,
+                height: 260,
+                borderRadius: "50%",
+                background: "radial-gradient(circle, rgba(0,102,255,0.18) 0%, transparent 70%)",
+                animation: "pulse 3s ease-in-out infinite",
+              }}
+            />
+            {/* The circular logo image */}
+            <img
+              src="/logo_circle_blue.jpg"
+              alt="Arvtech Studio"
+              style={{
+                width: 270,
+                height: 270,
+                borderRadius: "50%",
+                objectFit: "cover",
+                boxShadow:
+                  "0 0 0 3px rgba(0,200,255,0.5), 0 0 30px rgba(0,102,255,0.35), 0 20px 50px rgba(0,102,255,0.2)",
+                position: "relative",
+                zIndex: 2,
+              }}
+            />
           </div>
         </div>
 
@@ -173,7 +196,7 @@ export default function AboutSection() {
                 fontFamily: "'Orbitron',sans-serif",
                 fontSize: 11,
                 letterSpacing: 6,
-                color: "#FF5500",
+                color: "#0066FF",
                 fontWeight: 700,
               }}
             >

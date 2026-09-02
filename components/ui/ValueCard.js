@@ -23,7 +23,7 @@ export default function ValueCard({ valueItem }) {
           fontWeight: 700,
           fontSize: 14,
           letterSpacing: 3,
-          color: "#FF5500",
+          color: "#0066FF",
           marginBottom: 8,
         }}
       >

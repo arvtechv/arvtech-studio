@@ -98,7 +98,7 @@ export default function ProjectCard({ project, onContactClick }) {
           style={{
             background: "#F8FAFC",
             border: "1px solid #CBD5E1",
-            color: "#FF5500",
+            color: "#0066FF",
             padding: "10px 16px",
             borderRadius: 6,
             fontFamily: "'Orbitron',sans-serif",

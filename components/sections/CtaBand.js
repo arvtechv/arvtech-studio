@@ -12,9 +12,9 @@ export default function CtaBand() {
         position: "relative",
         zIndex: 2,
         textAlign: "center",
-        background: "linear-gradient(135deg, #FFF5F0 0%, #FFF0EB 100%)",
-        borderTop: "1px solid rgba(255, 85, 0, 0.15)",
-        borderBottom: "1px solid rgba(255, 85, 0, 0.15)",
+        background: "linear-gradient(135deg, #EFF6FF 0%, #E0F2FE 100%)",
+        borderTop: "1px solid rgba(0, 102, 255, 0.15)",
+        borderBottom: "1px solid rgba(0, 102, 255, 0.15)",
       }}
     >
       <p
@@ -38,7 +38,7 @@ export default function CtaBand() {
         }}
       >
         <span style={{ color: "#0F172A" }}>{t("cta.title")} </span>
-        <span style={{ color: "#FF5500" }}>{t("cta.highlight")}</span>
+        <span style={{ color: "#0066FF" }}>{t("cta.highlight")}</span>
       </h2>
       <p
         style={{

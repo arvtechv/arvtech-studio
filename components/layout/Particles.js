@@ -12,14 +12,14 @@ export default function Particles() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const particles = Array.from({ length: 45 }, () => ({
+    const particles = Array.from({ length: 50 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       r: Math.random() * 2.5 + 1,
       dx: (Math.random() - 0.5) * 0.35,
       dy: -Math.random() * 0.5 - 0.15,
-      opacity: Math.random() * 0.35 + 0.1,
-      color: Math.random() > 0.5 ? "#FF5500" : "#FF8800",
+      opacity: Math.random() * 0.4 + 0.15,
+      color: Math.random() > 0.5 ? "#0066FF" : "#00C8FF",
     }));
 
     let animId;

@@ -109,10 +109,10 @@ export default function CarePage() {
             --border: #E2E8F0;
             --ink: #0F172A;
             --muted: #475569;
-            --accent: #FF5500;
-            --accent-text: #FF5500;
+            --accent: #0066FF;
+            --accent-text: #0066FF;
             --accent-ink: #FFFFFF;
-            --accent-2: #0284C7;
+            --accent-2: #00C8FF;
             background: var(--bg);
             color: var(--ink);
             font-family: var(--font-body), sans-serif;
@@ -159,19 +159,19 @@ export default function CarePage() {
             flex-wrap: wrap;
           }
           .btn-primary {
-            background: linear-gradient(135deg, #FF5500 0%, #FF8800 100%);
+            background: linear-gradient(135deg, #0052FF 0%, #00C8FF 100%);
             color: #FFFFFF;
             font-weight: 700;
             padding: 0.9rem 1.6rem;
             border-radius: 6px;
             text-decoration: none;
             font-size: 0.95rem;
-            box-shadow: 0 4px 14px rgba(255, 85, 0, 0.25);
+            box-shadow: 0 4px 14px rgba(0, 102, 255, 0.28);
             transition: transform 0.2s, box-shadow 0.2s;
           }
           .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 85, 0, 0.35);
+            box-shadow: 0 6px 20px rgba(0, 102, 255, 0.38);
           }
           .btn-primary.large {
             font-size: 1.05rem;
@@ -189,8 +189,8 @@ export default function CarePage() {
             transition: border-color 0.2s, color 0.2s;
           }
           .btn-ghost:hover {
-            border-color: #FF5500;
-            color: #FF5500;
+            border-color: #0066FF;
+            color: #0066FF;
           }
           .ticket {
             position: relative;

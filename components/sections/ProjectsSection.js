@@ -32,7 +32,7 @@ export default function ProjectsSection({ onContactClick }) {
             fontFamily: "'Orbitron',sans-serif",
             fontSize: 11,
             letterSpacing: 6,
-            color: "#FF5500",
+            color: "#0066FF",
             fontWeight: 700,
           }}
         >
@@ -66,7 +66,7 @@ export default function ProjectsSection({ onContactClick }) {
           style={{
             width: 50,
             height: 3,
-            background: "#FF5500",
+            background: "#0066FF",
             margin: "18px auto 0",
             borderRadius: 2,
           }}
@@ -98,7 +98,7 @@ export default function ProjectsSection({ onContactClick }) {
               onClick={() => setActiveCategory(cat.key)}
               style={{
                 background: isSelected
-                  ? "linear-gradient(135deg, #FF5500 0%, #FF8800 100%)"
+                  ? "linear-gradient(135deg, #0052FF 0%, #00C8FF 100%)"
                   : "#FFFFFF",
                 border: isSelected ? "none" : "1px solid #CBD5E1",
                 color: isSelected ? "#FFFFFF" : "#475569",
@@ -109,7 +109,7 @@ export default function ProjectsSection({ onContactClick }) {
                 fontWeight: 700,
                 letterSpacing: 2,
                 boxShadow: isSelected
-                  ? "0 4px 14px rgba(255, 85, 0, 0.25)"
+                  ? "0 4px 14px rgba(0, 102, 255, 0.28)"
                   : "0 2px 6px rgba(0,0,0,0.02)",
               }}
             >
