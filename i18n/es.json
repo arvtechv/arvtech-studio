@@ -146,6 +146,7 @@
     "emailPlaceholder": "tu@email.com",
     "service": "SERVICIO",
     "servicePlaceholder": "¿Qué necesitas? Games, Apps, Web...",
+    "other": "Otro servicio",
     "message": "MENSAJE",
     "messagePlaceholder": "Cuéntanos sobre tu proyecto...",
     "send": "ENVIAR MENSAJE",

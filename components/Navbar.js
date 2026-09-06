@@ -1,13 +1,25 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useTranslation } from "@/i18n/useTranslation";
 
 function LogoMark() {
   return (
-    <img src="/logo.png" alt="ARVTECH" style={{ width: 68, height: 50, objectFit: "contain" }} />
+    <Image
+      src="/logo.png"
+      alt="ARVTECH"
+      width={52}
+      height={52}
+      style={{
+        width: 52,
+        height: 52,
+        objectFit: "contain",
+        filter: "drop-shadow(0 0 6px rgba(0,102,255,0.35))",
+      }}
+    />
   );
 }
 
@@ -74,7 +86,7 @@ export default function Navbar() {
           backdropFilter: "blur(14px)",
           WebkitBackdropFilter: "blur(14px)",
           borderBottom: "1px solid rgba(226, 232, 240, 0.9)",
-          boxShadow: scrolled ? "0 4px 20px rgba(15, 23, 42, 0.06)" : "none",
+          boxShadow: scrolled ? "0 4px 20px rgba(0, 102, 255, 0.06)" : "none",
           transition: "all 0.3s ease",
         }}
       >
@@ -93,7 +105,7 @@ export default function Navbar() {
           <div>
             <div
               style={{
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontWeight: 900,
                 fontSize: 17,
                 letterSpacing: 4,
@@ -105,10 +117,10 @@ export default function Navbar() {
             </div>
             <div
               style={{
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 9,
                 letterSpacing: 6,
-                color: "#FF5500",
+                color: "#0066FF",
                 fontWeight: 700,
                 marginTop: -1,
               }}
@@ -135,11 +147,11 @@ export default function Navbar() {
                   style={{
                     textDecoration: "none",
                     cursor: "pointer",
-                    fontFamily: "'Orbitron', sans-serif",
+                    fontFamily: "var(--font-orbitron), sans-serif",
                     fontSize: 12,
                     fontWeight: 700,
                     letterSpacing: 2,
-                    color: isActive ? "#FF5500" : "#334155",
+                    color: isActive ? "#0066FF" : "#334155",
                     padding: "6px 0",
                     transition: "color 0.2s ease, transform 0.2s ease",
                     whiteSpace: "nowrap",
@@ -164,7 +176,7 @@ export default function Navbar() {
                 color: "#0F172A",
                 padding: "7px 12px",
                 borderRadius: 6,
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 cursor: "pointer",
                 fontSize: 11,
                 fontWeight: 700,
@@ -179,17 +191,17 @@ export default function Navbar() {
               href="/#contact"
               onClick={(e) => handleNavClick(e, { key: "contact", id: "contact", href: "/#contact" })}
               style={{
-                background: "linear-gradient(135deg, #FF5500 0%, #FF8800 100%)",
+                background: "linear-gradient(135deg, #0052FF 0%, #00C8FF 100%)",
                 border: "none",
                 color: "#FFFFFF",
                 padding: "11px 22px",
                 borderRadius: 6,
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 11,
                 fontWeight: 700,
                 letterSpacing: 2,
                 cursor: "pointer",
-                boxShadow: "0 4px 14px rgba(255, 85, 0, 0.25)",
+                boxShadow: "0 4px 14px rgba(0, 102, 255, 0.28)",
                 whiteSpace: "nowrap",
                 textDecoration: "none",
                 display: "inline-block",
@@ -226,7 +238,7 @@ export default function Navbar() {
             style={{
               width: 26,
               height: 3,
-              background: "#FF5500",
+              background: "#0066FF",
               borderRadius: 2,
               pointerEvents: "none",
             }}
@@ -235,7 +247,7 @@ export default function Navbar() {
             style={{
               width: 26,
               height: 3,
-              background: "#FF5500",
+              background: "#0066FF",
               borderRadius: 2,
               pointerEvents: "none",
             }}
@@ -244,7 +256,7 @@ export default function Navbar() {
             style={{
               width: 26,
               height: 3,
-              background: "#FF5500",
+              background: "#0066FF",
               borderRadius: 2,
               pointerEvents: "none",
             }}
@@ -291,14 +303,14 @@ export default function Navbar() {
             <LogoMark />
             <span
               style={{
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontWeight: 900,
                 fontSize: 15,
                 color: "#0F172A",
                 letterSpacing: 2,
               }}
             >
-              ARVTECH <span style={{ color: "#FF5500" }}>STUDIO</span>
+              ARVTECH <span style={{ color: "#0066FF" }}>STUDIO</span>
             </span>
           </div>
 
@@ -348,7 +360,7 @@ export default function Navbar() {
                 textDecoration: "none",
                 borderBottom: "1px solid #F1F5F9",
                 color: "#0F172A",
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 15,
                 fontWeight: 700,
                 letterSpacing: 3,
@@ -370,17 +382,17 @@ export default function Navbar() {
             onClick={(e) => handleNavClick(e, { key: "contact", id: "contact", href: "/#contact" })}
             style={{
               width: "100%",
-              background: "linear-gradient(135deg, #FF5500 0%, #FF8800 100%)",
+              background: "linear-gradient(135deg, #0052FF 0%, #00C8FF 100%)",
               border: "none",
               color: "#FFFFFF",
               padding: "15px",
               borderRadius: 8,
-              fontFamily: "'Orbitron', sans-serif",
+              fontFamily: "var(--font-orbitron), sans-serif",
               fontSize: 13,
               fontWeight: 700,
               letterSpacing: 3,
               cursor: "pointer",
-              boxShadow: "0 6px 20px rgba(255, 85, 0, 0.25)",
+              boxShadow: "0 6px 20px rgba(0, 102, 255, 0.28)",
               textAlign: "center",
               textDecoration: "none",
               boxSizing: "border-box",
@@ -398,7 +410,7 @@ export default function Navbar() {
               paddingTop: 8,
             }}
           >
-            <span style={{ fontFamily: "'Rajdhani', sans-serif", fontSize: 14, color: "#64748B", fontWeight: 600 }}>
+            <span style={{ fontFamily: "var(--font-rajdhani), sans-serif", fontSize: 14, color: "#64748B", fontWeight: 600 }}>
               Idioma / Language:
             </span>
             <select
@@ -410,7 +422,7 @@ export default function Navbar() {
                 color: "#0F172A",
                 padding: "8px 14px",
                 borderRadius: 6,
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 12,
                 fontWeight: 700,
               }}
@@ -424,12 +436,12 @@ export default function Navbar() {
 
       <style jsx global>{`
         .nav-link-hover:hover {
-          color: #FF5500 !important;
+          color: #0066FF !important;
           transform: translateY(-1px);
         }
         .cta-header-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(255, 85, 0, 0.35) !important;
+          box-shadow: 0 6px 20px rgba(0, 102, 255, 0.38) !important;
         }
         .close-drawer-btn:hover {
           background-color: #E2E8F0 !important;

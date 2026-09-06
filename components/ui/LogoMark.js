@@ -1,9 +1,18 @@
-export default function LogoMark({ width = 74, height = 56 }) {
+import Image from "next/image";
+
+export default function LogoMark({ width = 52, height = 52 }) {
   return (
-    <img
+    <Image
       src="/logo.png"
       alt="ARVTECH STUDIO"
-      style={{ width, height, objectFit: "contain" }}
+      width={width}
+      height={height}
+      style={{
+        width,
+        height,
+        objectFit: "contain",
+        filter: "drop-shadow(0 0 6px rgba(0,102,255,0.35))",
+      }}
     />
   );
 }
