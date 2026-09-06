@@ -12,10 +12,10 @@ export default function ServicesSection() {
       <div style={{ textAlign: "center", marginBottom: 54 }}>
         <span
           style={{
-            fontFamily: "'Orbitron',sans-serif",
+            fontFamily: "var(--font-orbitron), sans-serif",
             fontSize: 11,
             letterSpacing: 6,
-            color: "#FF5500",
+            color: "#0066FF",
             fontWeight: 700,
           }}
         >
@@ -23,7 +23,7 @@ export default function ServicesSection() {
         </span>
         <h2
           style={{
-            fontFamily: "'Orbitron',sans-serif",
+            fontFamily: "var(--font-orbitron), sans-serif",
             fontWeight: 900,
             fontSize: "clamp(26px, 4vw, 42px)",
             letterSpacing: "0.04em",
@@ -35,7 +35,7 @@ export default function ServicesSection() {
         </h2>
         <p
           style={{
-            fontFamily: "'Rajdhani',sans-serif",
+            fontFamily: "var(--font-rajdhani), sans-serif",
             fontSize: "clamp(15px, 1.8vw, 17px)",
             color: "#64748B",
             marginTop: 8,
@@ -47,7 +47,7 @@ export default function ServicesSection() {
           style={{
             width: 50,
             height: 3,
-            background: "#FF5500",
+            background: "#0066FF",
             margin: "18px auto 0",
             borderRadius: 2,
           }}

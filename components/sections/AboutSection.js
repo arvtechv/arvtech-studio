@@ -1,6 +1,7 @@
 "use client";
 
 import LogoMark from "@/components/ui/LogoMark";
+import Image from "next/image";
 import ValueCard from "@/components/ui/ValueCard";
 import { VALUES_DATA } from "@/domain/constants/valuesData";
 import { useTranslation } from "@/i18n/useTranslation";
@@ -24,10 +25,10 @@ export default function AboutSection() {
           <div>
             <span
               style={{
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 11,
                 letterSpacing: 6,
-                color: "#FF5500",
+                color: "#0066FF",
                 fontWeight: 700,
               }}
             >
@@ -35,7 +36,7 @@ export default function AboutSection() {
             </span>
             <h2
               style={{
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontWeight: 900,
                 fontSize: "clamp(24px, 3.5vw, 40px)",
                 letterSpacing: "0.04em",
@@ -50,14 +51,14 @@ export default function AboutSection() {
               style={{
                 width: 40,
                 height: 3,
-                background: "#FF5500",
+                background: "#0066FF",
                 margin: "20px 0",
                 borderRadius: 2,
               }}
             />
             <p
               style={{
-                fontFamily: "'Rajdhani',sans-serif",
+                fontFamily: "var(--font-rajdhani), sans-serif",
                 fontSize: 17,
                 color: "#475569",
                 lineHeight: 1.8,
@@ -68,7 +69,7 @@ export default function AboutSection() {
             </p>
             <p
               style={{
-                fontFamily: "'Rajdhani',sans-serif",
+                fontFamily: "var(--font-rajdhani), sans-serif",
                 fontSize: 17,
                 color: "#475569",
                 lineHeight: 1.8,
@@ -81,17 +82,17 @@ export default function AboutSection() {
               <div>
                 <div
                   style={{
-                    fontFamily: "'Orbitron',sans-serif",
+                    fontFamily: "var(--font-orbitron), sans-serif",
                     fontSize: 32,
                     fontWeight: 900,
-                    color: "#FF5500",
+                    color: "#0066FF",
                   }}
                 >
                   4+
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Rajdhani',sans-serif",
+                    fontFamily: "var(--font-rajdhani), sans-serif",
                     fontSize: 12,
                     letterSpacing: 2,
                     color: "#64748B",
@@ -105,17 +106,17 @@ export default function AboutSection() {
               <div>
                 <div
                   style={{
-                    fontFamily: "'Orbitron',sans-serif",
+                    fontFamily: "var(--font-orbitron), sans-serif",
                     fontSize: 32,
                     fontWeight: 900,
-                    color: "#FF5500",
+                    color: "#0066FF",
                   }}
                 >
                   100%
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Rajdhani',sans-serif",
+                    fontFamily: "var(--font-rajdhani), sans-serif",
                     fontSize: 12,
                     letterSpacing: 2,
                     color: "#64748B",
@@ -128,7 +129,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Logo Showcase Box */}
+          {/* Logo Circular Badge */}
           <div
             style={{
               display: "flex",
@@ -137,31 +138,56 @@ export default function AboutSection() {
               position: "relative",
             }}
           >
+            {/* Outer rotating dashed ring */}
             <div
               style={{
-                position: "relative",
-                width: 280,
-                height: 280,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#FFFFFF",
+                position: "absolute",
+                width: 320,
+                height: 320,
+                border: "1.5px dashed rgba(0,200,255,0.4)",
                 borderRadius: "50%",
-                boxShadow: "0 20px 40px rgba(15,23,42,0.06)",
-                border: "1px solid #E2E8F0",
+                animation: "rotateSlow 18s linear infinite",
               }}
-            >
-              <div
-                style={{
-                  position: "absolute",
-                  inset: -10,
-                  border: "1px dashed rgba(255,85,0,0.3)",
-                  borderRadius: "50%",
-                  animation: "rotateSlow 25s linear infinite",
-                }}
-              />
-              <LogoMark />
-            </div>
+            />
+            {/* Inner counter-rotating ring */}
+            <div
+              style={{
+                position: "absolute",
+                width: 295,
+                height: 295,
+                border: "1px dashed rgba(0,102,255,0.25)",
+                borderRadius: "50%",
+                animation: "rotateSlow 30s linear infinite reverse",
+              }}
+            />
+            {/* Glow pulse backdrop */}
+            <div
+              style={{
+                position: "absolute",
+                width: 260,
+                height: 260,
+                borderRadius: "50%",
+                background: "radial-gradient(circle, rgba(0,102,255,0.18) 0%, transparent 70%)",
+                animation: "pulse 3s ease-in-out infinite",
+              }}
+            />
+            {/* The circular logo image */}
+            <Image
+              src="/logo_circle_blue.png"
+              alt="Arvtech Studio"
+              width={270}
+              height={270}
+              style={{
+                width: 270,
+                height: 270,
+                borderRadius: "50%",
+                objectFit: "cover",
+                boxShadow:
+                  "0 0 0 3px rgba(0,200,255,0.5), 0 0 30px rgba(0,102,255,0.35), 0 20px 50px rgba(0,102,255,0.2)",
+                position: "relative",
+                zIndex: 2,
+              }}
+            />
           </div>
         </div>
 
@@ -170,10 +196,10 @@ export default function AboutSection() {
           <div style={{ textAlign: "center", marginBottom: 44 }}>
             <span
               style={{
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 11,
                 letterSpacing: 6,
-                color: "#FF5500",
+                color: "#0066FF",
                 fontWeight: 700,
               }}
             >
@@ -181,7 +207,7 @@ export default function AboutSection() {
             </span>
             <h3
               style={{
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontWeight: 900,
                 fontSize: "clamp(24px, 3.5vw, 36px)",
                 letterSpacing: "0.04em",

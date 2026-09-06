@@ -32,7 +32,7 @@ export default function ProjectCard({ project, onContactClick }) {
         <span style={{ fontSize: 44 }}>{project.icon}</span>
         <span
           style={{
-            fontFamily: "'Orbitron',sans-serif",
+            fontFamily: "var(--font-orbitron), sans-serif",
             fontSize: 10,
             fontWeight: 700,
             letterSpacing: 3,
@@ -50,7 +50,7 @@ export default function ProjectCard({ project, onContactClick }) {
       <div style={{ padding: "24px", flex: 1, display: "flex", flexDirection: "column" }}>
         <h3
           style={{
-            fontFamily: "'Orbitron',sans-serif",
+            fontFamily: "var(--font-orbitron), sans-serif",
             fontWeight: 700,
             fontSize: 17,
             color: "#0F172A",
@@ -61,7 +61,7 @@ export default function ProjectCard({ project, onContactClick }) {
         </h3>
         <p
           style={{
-            fontFamily: "'Rajdhani',sans-serif",
+            fontFamily: "var(--font-rajdhani), sans-serif",
             fontSize: 15,
             color: "#475569",
             lineHeight: 1.6,
@@ -84,7 +84,7 @@ export default function ProjectCard({ project, onContactClick }) {
                 fontWeight: 600,
                 padding: "3px 10px",
                 borderRadius: 4,
-                fontFamily: "'Rajdhani',sans-serif",
+                fontFamily: "var(--font-rajdhani), sans-serif",
               }}
             >
               {tItem}
@@ -98,10 +98,10 @@ export default function ProjectCard({ project, onContactClick }) {
           style={{
             background: "#F8FAFC",
             border: "1px solid #CBD5E1",
-            color: "#FF5500",
+            color: "#0066FF",
             padding: "10px 16px",
             borderRadius: 6,
-            fontFamily: "'Orbitron',sans-serif",
+            fontFamily: "var(--font-orbitron), sans-serif",
             fontSize: 11,
             fontWeight: 700,
             letterSpacing: 2,

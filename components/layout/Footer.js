@@ -31,7 +31,7 @@ export default function Footer() {
           <div>
             <div
               style={{
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontWeight: 900,
                 fontSize: 16,
                 letterSpacing: 4,
@@ -42,10 +42,10 @@ export default function Footer() {
             </div>
             <div
               style={{
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 8,
                 letterSpacing: 6,
-                color: "#FF5500",
+                color: "#0066FF",
                 fontWeight: 700,
               }}
             >
@@ -57,10 +57,10 @@ export default function Footer() {
         <div style={{ textAlign: "center" }}>
           <div
             style={{
-              fontFamily: "'Orbitron',sans-serif",
+              fontFamily: "var(--font-orbitron), sans-serif",
               fontSize: 11,
               letterSpacing: 3,
-              color: "#FF5500",
+              color: "#0066FF",
               marginBottom: 6,
               fontWeight: 700,
             }}
@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
           <div
             style={{
-              fontFamily: "'Rajdhani',sans-serif",
+              fontFamily: "var(--font-rajdhani), sans-serif",
               fontSize: 13,
               color: "#64748B",
               fontWeight: 500,
