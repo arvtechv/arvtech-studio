@@ -1,6 +1,7 @@
 import { TranslationProvider } from '@/i18n/useTranslation';
 import Navbar from '@/components/Navbar';
 import { Orbitron, Rajdhani } from "next/font/google";
+import { headers } from "next/headers";
 import "./globals.css";
 
 const orbitron = Orbitron({
@@ -58,11 +59,16 @@ export const viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const headersList = await headers();
+  const acceptLanguage = headersList.get("accept-language") || "";
+  const browserLang = acceptLanguage.split(",")[0]?.split("-")[0]?.trim().toLowerCase();
+  const initialLang = ["es", "en"].includes(browserLang) ? browserLang : "es";
+
   return (
-    <html lang="es" className={`${orbitron.variable} ${rajdhani.variable}`} suppressHydrationWarning>
+    <html lang={initialLang} className={`${orbitron.variable} ${rajdhani.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
-        <TranslationProvider>
+        <TranslationProvider initialLang={initialLang}>
           <Navbar />
           {children}
         </TranslationProvider>

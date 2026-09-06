@@ -8,18 +8,16 @@ const TranslationContext = createContext();
 
 const translations = { es, en };
 
-export function TranslationProvider({ children }) {
-  const [lang, setLang] = useState('es');
+export function TranslationProvider({ children, initialLang = "es" }) {
+  const [lang, setLang] = useState(initialLang);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Detecta el idioma del navegador
-    const browserLang = navigator.language.split('-')[0];
-    const defaultLang = ['es', 'en'].includes(browserLang) ? browserLang : 'es';
-    
-    // Si hay idioma guardado, lo usa
-    const savedLang = localStorage.getItem('language') || defaultLang;
-    setLang(savedLang);
+    // Si el usuario guardó un idioma previamente, lo respeta
+    const savedLang = localStorage.getItem("language");
+    if (savedLang && translations[savedLang]) {
+      setLang(savedLang);
+    }
     setMounted(true);
   }, []);
 
