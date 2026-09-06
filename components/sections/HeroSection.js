@@ -215,38 +215,115 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
-            minHeight: 350,
+            minHeight: 400,
+            perspective: "1000px"
           }}
         >
+          {/* Glowing background blob */}
           <div
             style={{
               position: "absolute",
-              width: "90%",
-              height: "90%",
+              width: "120%",
+              height: "120%",
               borderRadius: "50%",
-              background: "radial-gradient(circle, rgba(0,102,255,0.15) 0%, transparent 70%)",
+              background: "radial-gradient(circle, rgba(0,102,255,0.15) 0%, transparent 60%)",
               top: "50%",
               left: "50%",
               transform: "translate(-50%,-50%)",
               pointerEvents: "none",
+              zIndex: 0,
             }}
           />
-          <RadarBg />
-          <Image
-            src="/imagebody.png"
-            alt="Arvtech Studio Showcase"
-            width={1536}
-            height={1024}
-            priority
-            sizes="(max-width: 992px) 90vw, 480px"
+          
+          {/* 3D Floating Image Card */}
+          <div
             style={{
-              maxWidth: "105%",
-              height: "auto",
               position: "relative",
+              width: "100%",
+              maxWidth: 640,
+              aspectRatio: "16/9",
+              borderRadius: 16,
+              overflow: "hidden",
               zIndex: 2,
-              filter: "drop-shadow(0 20px 30px rgba(0,102,255,0.15))",
+              boxShadow: "0 30px 60px -15px rgba(0,102,255,0.3)",
+              border: "1px solid rgba(255,255,255,0.6)",
+              transform: "rotateY(-8deg) rotateX(4deg)",
+              transition: "transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s ease",
+              cursor: "pointer"
             }}
-          />
+            onMouseEnter={(e) => {
+               e.currentTarget.style.transform = "rotateY(0deg) rotateX(0deg) scale(1.02)";
+               e.currentTarget.style.boxShadow = "0 35px 70px -15px rgba(0,102,255,0.4)";
+            }}
+            onMouseLeave={(e) => {
+               e.currentTarget.style.transform = "rotateY(-8deg) rotateX(4deg) scale(1)";
+               e.currentTarget.style.boxShadow = "0 30px 60px -15px rgba(0,102,255,0.3)";
+            }}
+          >
+            <Image
+              src="/images/hero_main.jpg"
+              alt="Arvtech Studio Showcase"
+              fill
+              priority
+              style={{
+                objectFit: "cover",
+              }}
+            />
+            {/* Glassmorphism overlay */}
+            <div style={{
+               position: "absolute",
+               bottom: 0,
+               left: 0,
+               right: 0,
+               padding: "20px 24px",
+               background: "rgba(15, 23, 42, 0.75)",
+               backdropFilter: "blur(12px)",
+               borderTop: "1px solid rgba(255,255,255,0.15)",
+               display: "flex",
+               justifyContent: "space-between",
+               alignItems: "center"
+            }}>
+               <div>
+                 <div style={{ fontFamily: "var(--font-orbitron), sans-serif", fontWeight: 800, fontSize: 16, color: "#FFFFFF", letterSpacing: 2 }}>ARVTECH STUDIO</div>
+                 <div style={{ fontFamily: "var(--font-rajdhani), sans-serif", fontSize: 14, color: "#94A3B8", fontWeight: 600 }}>Building the future of digital solutions.</div>
+               </div>
+               <div style={{
+                 background: "linear-gradient(135deg, #0052FF 0%, #00C8FF 100%)",
+                 width: 40,
+                 height: 40,
+                 borderRadius: "50%",
+                 display: "flex",
+                 justifyContent: "center",
+                 alignItems: "center",
+                 color: "#FFF",
+                 fontSize: 20
+               }}>
+                 ✨
+               </div>
+            </div>
+          </div>
+          
+          {/* Floating tech badge */}
+          <div style={{
+             position: "absolute",
+             top: "15%",
+             right: "0%",
+             background: "#FFFFFF",
+             padding: "12px 20px",
+             borderRadius: 12,
+             boxShadow: "0 15px 35px rgba(0,0,0,0.1)",
+             zIndex: 3,
+             border: "1px solid #E2E8F0",
+             display: "flex",
+             alignItems: "center",
+             gap: 8,
+             transform: "translateZ(30px)"
+          }}>
+             <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#10B981", boxShadow: "0 0 10px #10B981" }} />
+             <span style={{ fontFamily: "var(--font-orbitron), sans-serif", fontSize: 11, fontWeight: 800, color: "#0F172A", letterSpacing: 1 }}>
+               SYSTEMS ONLINE
+             </span>
+          </div>
         </div>
       </div>
     </section>
