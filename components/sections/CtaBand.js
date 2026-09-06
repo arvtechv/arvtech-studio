@@ -19,7 +19,7 @@ export default function CtaBand() {
     >
       <p
         style={{
-          fontFamily: "'Orbitron',sans-serif",
+          fontFamily: "var(--font-orbitron), sans-serif",
           fontSize: "clamp(10px, 1.5vw, 12px)",
           letterSpacing: 6,
           color: "#64748B",
@@ -31,7 +31,7 @@ export default function CtaBand() {
       </p>
       <h2
         style={{
-          fontFamily: "'Orbitron',sans-serif",
+          fontFamily: "var(--font-orbitron), sans-serif",
           fontWeight: 900,
           fontSize: "clamp(24px, 4vw, 48px)",
           letterSpacing: "0.06em",
@@ -42,7 +42,7 @@ export default function CtaBand() {
       </h2>
       <p
         style={{
-          fontFamily: "'Rajdhani',sans-serif",
+          fontFamily: "var(--font-rajdhani), sans-serif",
           fontSize: "clamp(15px, 1.8vw, 18px)",
           marginTop: 12,
           color: "#475569",

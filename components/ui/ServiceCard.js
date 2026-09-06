@@ -22,7 +22,7 @@ export default function ServiceCard({ service }) {
           position: "absolute",
           top: 0,
           right: 0,
-          fontFamily: "'Orbitron',sans-serif",
+          fontFamily: "var(--font-orbitron), sans-serif",
           fontSize: 9,
           letterSpacing: 3,
           color: "#0066FF",
@@ -37,7 +37,7 @@ export default function ServiceCard({ service }) {
       <div style={{ fontSize: 36, marginBottom: 16 }}>{service.icon}</div>
       <h3
         style={{
-          fontFamily: "'Orbitron',sans-serif",
+          fontFamily: "var(--font-orbitron), sans-serif",
           fontWeight: 700,
           fontSize: 16,
           letterSpacing: 2,
@@ -49,7 +49,7 @@ export default function ServiceCard({ service }) {
       </h3>
       <p
         style={{
-          fontFamily: "'Rajdhani',sans-serif",
+          fontFamily: "var(--font-rajdhani), sans-serif",
           fontSize: 15,
           color: "#475569",
           lineHeight: 1.65,

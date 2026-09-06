@@ -19,7 +19,7 @@ export default function ValueCard({ valueItem }) {
       <div style={{ fontSize: 36, marginBottom: 14 }}>{valueItem.icon}</div>
       <h4
         style={{
-          fontFamily: "'Orbitron',sans-serif",
+          fontFamily: "var(--font-orbitron), sans-serif",
           fontWeight: 700,
           fontSize: 14,
           letterSpacing: 3,
@@ -31,7 +31,7 @@ export default function ValueCard({ valueItem }) {
       </h4>
       <p
         style={{
-          fontFamily: "'Rajdhani',sans-serif",
+          fontFamily: "var(--font-rajdhani), sans-serif",
           fontSize: 15,
           color: "#475569",
           lineHeight: 1.6,

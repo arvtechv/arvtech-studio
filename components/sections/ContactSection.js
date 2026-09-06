@@ -11,7 +11,7 @@ export default function ContactSection() {
       <div style={{ textAlign: "center", marginBottom: 54 }}>
         <span
           style={{
-            fontFamily: "'Orbitron',sans-serif",
+            fontFamily: "var(--font-orbitron), sans-serif",
             fontSize: 11,
             letterSpacing: 6,
             color: "#0066FF",
@@ -22,7 +22,7 @@ export default function ContactSection() {
         </span>
         <h2
           style={{
-            fontFamily: "'Orbitron',sans-serif",
+            fontFamily: "var(--font-orbitron), sans-serif",
             fontWeight: 900,
             fontSize: "clamp(26px, 4vw, 42px)",
             letterSpacing: "0.04em",

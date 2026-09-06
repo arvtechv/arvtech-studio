@@ -1,6 +1,7 @@
 "use client";
 
 import LogoMark from "@/components/ui/LogoMark";
+import Image from "next/image";
 import ValueCard from "@/components/ui/ValueCard";
 import { VALUES_DATA } from "@/domain/constants/valuesData";
 import { useTranslation } from "@/i18n/useTranslation";
@@ -24,7 +25,7 @@ export default function AboutSection() {
           <div>
             <span
               style={{
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 11,
                 letterSpacing: 6,
                 color: "#0066FF",
@@ -35,7 +36,7 @@ export default function AboutSection() {
             </span>
             <h2
               style={{
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontWeight: 900,
                 fontSize: "clamp(24px, 3.5vw, 40px)",
                 letterSpacing: "0.04em",
@@ -57,7 +58,7 @@ export default function AboutSection() {
             />
             <p
               style={{
-                fontFamily: "'Rajdhani',sans-serif",
+                fontFamily: "var(--font-rajdhani), sans-serif",
                 fontSize: 17,
                 color: "#475569",
                 lineHeight: 1.8,
@@ -68,7 +69,7 @@ export default function AboutSection() {
             </p>
             <p
               style={{
-                fontFamily: "'Rajdhani',sans-serif",
+                fontFamily: "var(--font-rajdhani), sans-serif",
                 fontSize: 17,
                 color: "#475569",
                 lineHeight: 1.8,
@@ -81,7 +82,7 @@ export default function AboutSection() {
               <div>
                 <div
                   style={{
-                    fontFamily: "'Orbitron',sans-serif",
+                    fontFamily: "var(--font-orbitron), sans-serif",
                     fontSize: 32,
                     fontWeight: 900,
                     color: "#0066FF",
@@ -91,7 +92,7 @@ export default function AboutSection() {
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Rajdhani',sans-serif",
+                    fontFamily: "var(--font-rajdhani), sans-serif",
                     fontSize: 12,
                     letterSpacing: 2,
                     color: "#64748B",
@@ -105,7 +106,7 @@ export default function AboutSection() {
               <div>
                 <div
                   style={{
-                    fontFamily: "'Orbitron',sans-serif",
+                    fontFamily: "var(--font-orbitron), sans-serif",
                     fontSize: 32,
                     fontWeight: 900,
                     color: "#0066FF",
@@ -115,7 +116,7 @@ export default function AboutSection() {
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Rajdhani',sans-serif",
+                    fontFamily: "var(--font-rajdhani), sans-serif",
                     fontSize: 12,
                     letterSpacing: 2,
                     color: "#64748B",
@@ -171,9 +172,11 @@ export default function AboutSection() {
               }}
             />
             {/* The circular logo image */}
-            <img
+            <Image
               src="/logo_circle_blue.png"
               alt="Arvtech Studio"
+              width={270}
+              height={270}
               style={{
                 width: 270,
                 height: 270,
@@ -193,7 +196,7 @@ export default function AboutSection() {
           <div style={{ textAlign: "center", marginBottom: 44 }}>
             <span
               style={{
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 11,
                 letterSpacing: 6,
                 color: "#0066FF",
@@ -204,7 +207,7 @@ export default function AboutSection() {
             </span>
             <h3
               style={{
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontWeight: 900,
                 fontSize: "clamp(24px, 3.5vw, 36px)",
                 letterSpacing: "0.04em",

@@ -38,7 +38,7 @@ export default function ArvtechStudioPage() {
   return (
     <div
       style={{
-        fontFamily: "'Rajdhani', 'Orbitron', sans-serif",
+        fontFamily: "var(--font-rajdhani), var(--font-orbitron), sans-serif",
         background: "#FAFAFC",
         color: "#0F172A",
         minHeight: "100vh",
@@ -46,7 +46,6 @@ export default function ArvtechStudioPage() {
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
         @keyframes pulse { 0%, 100% { opacity: 0.3; transform: translate(-50%,-50%) scale(1); } 50% { opacity: 0.7; transform: translate(-50%,-50%) scale(1.03); } }
         @keyframes rotateSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; background: #FFFFFF; }

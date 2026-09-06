@@ -29,7 +29,7 @@ export default function ProjectsSection({ onContactClick }) {
       <div style={{ textAlign: "center", marginBottom: 40 }}>
         <span
           style={{
-            fontFamily: "'Orbitron',sans-serif",
+            fontFamily: "var(--font-orbitron), sans-serif",
             fontSize: 11,
             letterSpacing: 6,
             color: "#0066FF",
@@ -40,7 +40,7 @@ export default function ProjectsSection({ onContactClick }) {
         </span>
         <h2
           style={{
-            fontFamily: "'Orbitron',sans-serif",
+            fontFamily: "var(--font-orbitron), sans-serif",
             fontWeight: 900,
             fontSize: "clamp(26px, 4vw, 42px)",
             letterSpacing: "0.04em",
@@ -52,7 +52,7 @@ export default function ProjectsSection({ onContactClick }) {
         </h2>
         <p
           style={{
-            fontFamily: "'Rajdhani',sans-serif",
+            fontFamily: "var(--font-rajdhani), sans-serif",
             fontSize: "clamp(15px, 1.8vw, 17px)",
             color: "#64748B",
             marginTop: 8,
@@ -104,7 +104,7 @@ export default function ProjectsSection({ onContactClick }) {
                 color: isSelected ? "#FFFFFF" : "#475569",
                 padding: "8px 20px",
                 borderRadius: 20,
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 11,
                 fontWeight: 700,
                 letterSpacing: 2,

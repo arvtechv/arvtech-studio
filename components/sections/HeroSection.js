@@ -1,6 +1,7 @@
 "use client";
 
 import RadarBg from "@/components/ui/RadarBg";
+import Image from "next/image";
 import { useTranslation } from "@/i18n/useTranslation";
 
 export default function HeroSection({ onServicesClick, onProjectsClick }) {
@@ -23,7 +24,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <span
             style={{
-              fontFamily: "'Orbitron',sans-serif",
+              fontFamily: "var(--font-orbitron), sans-serif",
               fontSize: 13,
               letterSpacing: 6,
               color: "#0066FF",
@@ -35,7 +36,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
 
           <h1
             style={{
-              fontFamily: "'Orbitron',sans-serif",
+              fontFamily: "var(--font-orbitron), sans-serif",
               fontWeight: 900,
               fontSize: "clamp(32px, 5vw, 56px)",
               letterSpacing: "0.02em",
@@ -57,7 +58,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
 
           <p
             style={{
-              fontFamily: "'Rajdhani',sans-serif",
+              fontFamily: "var(--font-rajdhani), sans-serif",
               fontWeight: 500,
               fontSize: "clamp(16px, 1.8vw, 19px)",
               color: "#475569",
@@ -77,7 +78,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
                 border: "none",
                 color: "#FFFFFF",
                 padding: "15px 32px",
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 12,
                 fontWeight: 700,
                 letterSpacing: 2,
@@ -97,7 +98,7 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
                 border: "2px solid #0066FF",
                 color: "#0066FF",
                 padding: "15px 32px",
-                fontFamily: "'Orbitron',sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 12,
                 fontWeight: 700,
                 letterSpacing: 2,
@@ -126,10 +127,10 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
             >
               <span style={{ fontSize: 24 }}>🚀</span>
               <div>
-                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 18, fontWeight: 900, color: "#0F172A" }}>
+                <div style={{ fontFamily: "var(--font-orbitron), sans-serif", fontSize: 18, fontWeight: 900, color: "#0F172A" }}>
                   {t("hero.metrics.projectsCount")}
                 </div>
-                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 2, color: "#0066FF", fontWeight: 700 }}>
+                <div style={{ fontFamily: "var(--font-orbitron), sans-serif", fontSize: 9, letterSpacing: 2, color: "#0066FF", fontWeight: 700 }}>
                   {t("hero.metrics.projectsLabel")}
                 </div>
               </div>
@@ -149,10 +150,10 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
             >
               <span style={{ fontSize: 24 }}>💻</span>
               <div>
-                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 18, fontWeight: 900, color: "#0F172A" }}>
+                <div style={{ fontFamily: "var(--font-orbitron), sans-serif", fontSize: 18, fontWeight: 900, color: "#0F172A" }}>
                   {t("hero.metrics.appsCount")}
                 </div>
-                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 2, color: "#0066FF", fontWeight: 700 }}>
+                <div style={{ fontFamily: "var(--font-orbitron), sans-serif", fontSize: 9, letterSpacing: 2, color: "#0066FF", fontWeight: 700 }}>
                   {t("hero.metrics.appsLabel")}
                 </div>
               </div>
@@ -172,10 +173,10 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
             >
               <span style={{ fontSize: 24 }}>🤝</span>
               <div>
-                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 18, fontWeight: 900, color: "#0F172A" }}>
+                <div style={{ fontFamily: "var(--font-orbitron), sans-serif", fontSize: 18, fontWeight: 900, color: "#0F172A" }}>
                   {t("hero.metrics.clientsCount")}
                 </div>
-                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 9, letterSpacing: 2, color: "#0066FF", fontWeight: 700 }}>
+                <div style={{ fontFamily: "var(--font-orbitron), sans-serif", fontSize: 9, letterSpacing: 2, color: "#0066FF", fontWeight: 700 }}>
                   {t("hero.metrics.clientsLabel")}
                 </div>
               </div>
@@ -195,10 +196,10 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
             >
               <span style={{ fontSize: 24 }}>⚡</span>
               <div>
-                <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 13, fontWeight: 900, color: "#0F172A" }}>
+                <div style={{ fontFamily: "var(--font-orbitron), sans-serif", fontSize: 13, fontWeight: 900, color: "#0F172A" }}>
                   {t("hero.metrics.innovationLabel")}
                 </div>
-                <div style={{ fontFamily: "'Rajdhani',sans-serif", fontSize: 11, color: "#64748B" }}>
+                <div style={{ fontFamily: "var(--font-rajdhani), sans-serif", fontSize: 11, color: "#64748B" }}>
                   {t("hero.metrics.innovationSub")}
                 </div>
               </div>
@@ -231,9 +232,13 @@ export default function HeroSection({ onServicesClick, onProjectsClick }) {
             }}
           />
           <RadarBg />
-          <img
+          <Image
             src="/imagebody.png"
             alt="Arvtech Studio Showcase"
+            width={1536}
+            height={1024}
+            priority
+            sizes="(max-width: 992px) 90vw, 480px"
             style={{
               maxWidth: "105%",
               height: "auto",

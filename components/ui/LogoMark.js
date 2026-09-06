@@ -1,8 +1,12 @@
+import Image from "next/image";
+
 export default function LogoMark({ width = 52, height = 52 }) {
   return (
-    <img
+    <Image
       src="/logo.png"
       alt="ARVTECH STUDIO"
+      width={width}
+      height={height}
       style={{
         width,
         height,

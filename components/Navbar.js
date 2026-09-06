@@ -1,15 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useTranslation } from "@/i18n/useTranslation";
 
 function LogoMark() {
   return (
-    <img
+    <Image
       src="/logo.png"
       alt="ARVTECH"
+      width={52}
+      height={52}
       style={{
         width: 52,
         height: 52,
@@ -102,7 +105,7 @@ export default function Navbar() {
           <div>
             <div
               style={{
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontWeight: 900,
                 fontSize: 17,
                 letterSpacing: 4,
@@ -114,7 +117,7 @@ export default function Navbar() {
             </div>
             <div
               style={{
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 9,
                 letterSpacing: 6,
                 color: "#0066FF",
@@ -144,7 +147,7 @@ export default function Navbar() {
                   style={{
                     textDecoration: "none",
                     cursor: "pointer",
-                    fontFamily: "'Orbitron', sans-serif",
+                    fontFamily: "var(--font-orbitron), sans-serif",
                     fontSize: 12,
                     fontWeight: 700,
                     letterSpacing: 2,
@@ -173,7 +176,7 @@ export default function Navbar() {
                 color: "#0F172A",
                 padding: "7px 12px",
                 borderRadius: 6,
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 cursor: "pointer",
                 fontSize: 11,
                 fontWeight: 700,
@@ -193,7 +196,7 @@ export default function Navbar() {
                 color: "#FFFFFF",
                 padding: "11px 22px",
                 borderRadius: 6,
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 11,
                 fontWeight: 700,
                 letterSpacing: 2,
@@ -300,7 +303,7 @@ export default function Navbar() {
             <LogoMark />
             <span
               style={{
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontWeight: 900,
                 fontSize: 15,
                 color: "#0F172A",
@@ -357,7 +360,7 @@ export default function Navbar() {
                 textDecoration: "none",
                 borderBottom: "1px solid #F1F5F9",
                 color: "#0F172A",
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 15,
                 fontWeight: 700,
                 letterSpacing: 3,
@@ -384,7 +387,7 @@ export default function Navbar() {
               color: "#FFFFFF",
               padding: "15px",
               borderRadius: 8,
-              fontFamily: "'Orbitron', sans-serif",
+              fontFamily: "var(--font-orbitron), sans-serif",
               fontSize: 13,
               fontWeight: 700,
               letterSpacing: 3,
@@ -407,7 +410,7 @@ export default function Navbar() {
               paddingTop: 8,
             }}
           >
-            <span style={{ fontFamily: "'Rajdhani', sans-serif", fontSize: 14, color: "#64748B", fontWeight: 600 }}>
+            <span style={{ fontFamily: "var(--font-rajdhani), sans-serif", fontSize: 14, color: "#64748B", fontWeight: 600 }}>
               Idioma / Language:
             </span>
             <select
@@ -419,7 +422,7 @@ export default function Navbar() {
                 color: "#0F172A",
                 padding: "8px 14px",
                 borderRadius: 6,
-                fontFamily: "'Orbitron', sans-serif",
+                fontFamily: "var(--font-orbitron), sans-serif",
                 fontSize: 12,
                 fontWeight: 700,
               }}
